@@ -17,10 +17,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'aaaaa';
+    return 'home';
 });
 
 Route::get('/my_page', [MyPlaceController::class, 'index']);
 Route::get('/post', [PostController::class, 'index']);
+Route::get('/post/create', [PostController::class, 'create']);
+Route::get('/post/update', [PostController::class, 'update']);
+Route::get('/post/delete', [PostController::class, 'delete']);
+Route::get('/post/first_or_create', [PostController::class, 'firstOrCreate']);
+Route::get('/post/uoc', [PostController::class, 'updateOrCreate']);
 Route::get('/profile',[ProfileController::class, 'index']);
 // Route::get();
