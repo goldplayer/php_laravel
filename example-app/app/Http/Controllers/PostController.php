@@ -9,11 +9,9 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        $posts = Post::where('likes', '>', 100)->get();
+      $posts = Post::all();
 
-        foreach($posts as $post){
-            dump($post->title);
-        }
+      return view('post', compact('posts'));
 
     }
 
