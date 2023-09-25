@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\MyPlaceController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'aaaaa';
 });
+
+Route::get('/my_page', [MyPlaceController::class, 'index']);
+Route::get('/post', [PostController::class, 'index']);
+Route::get('/profile',[ProfileController::class, 'index']);
+// Route::get();
