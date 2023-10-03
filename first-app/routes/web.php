@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,11 @@ Route::post('/user',[\App\Http\Controllers\UserController::class, 'store'])->nam
 Route::get('/user/{user}/edit', [\App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');
 Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'show'] )->name('user.show');
 Route::patch('/user/{user}', [\App\Http\Controllers\UserController::class, 'update'])->name('user.update');
+
+
+
+//categories routes
+
+Route::get('/category', [CategoryController::class,'index'])->name('category.index');
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::get('/categpry', [CategoryController::class, 'store'])->name('category.store');
