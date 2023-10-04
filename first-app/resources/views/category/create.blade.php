@@ -4,14 +4,16 @@
 
     <div class="container">
         <div class="row">
+     
             <form action="{{route('category.store')}}" method="post">
                 @csrf
-                <div class="form-group">
-                    <div class="mb-3">
-                        <input type="text" name="title" placeholder="enter the name of category">
-                    </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Title</label>
+                  <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
-            </form>
+                <button type="submit" name="create_category" class="btn btn-primary">Submit</button>
+              </form>
+       
         </div>
     </div>
 
